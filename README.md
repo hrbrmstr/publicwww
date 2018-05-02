@@ -20,6 +20,10 @@ has limited functionality under the free plan.
 
 The following functions are implemented:
 
+  - `source_code_search`: Find any alphanumeric snippet, signature or
+    keyword in the web pages HTML, JS and CSS code in the PublicWWW
+    database
+
 ## Installation
 
 ``` r
