@@ -1,0 +1,62 @@
+---
+output: rmarkdown::github_document
+---
+
+# publicwww
+
+Query the 'PublicWWW' Source Code Search Engine
+
+## Description
+
+The 'PublicWWW' <https://publicwww.com/> source code search engine indexes the content 
+of over 200 million web sites and provides a query interface that lets the
+caller find any alphanumeric snippet, signature or keyword in the web pages 
+'HTML', 'JavaScript' and 'CSS' style sheet code. 
+
+## NOTE
+
+The site requires an [API key](https://publicwww.com/pricing.html) and has limited
+functionality under the free plan.
+
+## What's Inside The Tin
+
+The following functions are implemented:
+
+## Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/publicwww")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+## Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(publicwww)
+library(tidyverse)
+
+# current verison
+packageVersion("publicwww")
+
+```
+
+### Sites using the WordPress theme "Twenty Sixteen":
+
+```{r cache=TRUE}
+source_code_search('"/wp-content/themes/twentysixteen/"')
+```
+
+### Sites running the coinhive JS miner
+
+```{r cache=TRUE}
+source_code_search('"coin-hive.com/lib/coinhive.min.js"')
+```
+
+### Sites (theoretically) running Drupal
+
+```{r cache=TRUE}
+source_code_search('"/sites/all/themes/"', snippets = TRUE)
+```

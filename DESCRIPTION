@@ -1,0 +1,26 @@
+Package: publicwww
+Type: Package
+Title: Query the 'PublicWWW' Source Code Search Engine
+Version: 0.1.0
+Date: 2018-05-02
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640"))
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: The 'PublicWWW' <https://publicwww.com/> source code search engine indexes the content 
+    of over 200 million web sites and provides a query interface that lets the
+    caller find any alphanumeric snippet, signature or keyword in the web pages 
+    'HTML', 'JavaScript' and 'CSS' style sheet code. 
+URL: https://github.com/hrbrmstr/publicwww
+BugReports: https://github.com/hrbrmstr/publicwww/issues
+Encoding: UTF-8
+License: AGPL
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    httr
+RoxygenNote: 6.0.1.9000
